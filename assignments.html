@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Head content -->
+  <meta charset="UTF-8" />
+  <title>Aarsh Mehta | Assignments</title>
+  <!-- Include styles and AOS CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Google Fonts -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
+</head>
+
+<body class="body">
+  <!-- Header -->
+  <header>
+    <div class="cursor-inner" id="cursor-inner"></div>
+    <div class="cursor-outer" id="cursor-outer"></div>
+
+    <div class="navbar" id="navbar">
+      <div class="hey">Hey!</div>
+      <div class="logo" tabindex="0" aria-label="Aarsh Mehta logo">
+        <div class="logo-top">
+          <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar" />
+        </div>
+      </div>
+      <div class="navbar-tabs" id="navbar-tabs">
+        <ul class="navbar-tabs-ul">
+          <li class="home" data-aos="fade-down" data-aos-delay="100">
+            <a href="index.html" tabindex="0" aria-label="Home menu button">
+              &#60;/Home&#62;
+            </a>
+          </li>
+          <li class="projects navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+            <a href="projects.html" aria-label="projects menu button">
+              &#60;/Projects&#62;
+            </a>
+          </li>
+          <li class="work-experience navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+            <a href="work-experience.html" aria-label="work-experience menu button">
+              &#60;/Work-experience&#62;
+            </a>
+          </li>
+          <li class="Assignments navbar-tabs-li activeThistab" data-aos="fade-down" data-aos-delay="900">
+            <a href="assignments.html" aria-label="assignments menu button">
+              &#60;/Assignments&#62;
+            </a>
+          </li>
+          <li class="Contact Me navbar-tabs-li" data-aos="fade-down" data-aos-delay="1100">
+            <a href="contact.html" aria-label="contact menu button">
+              &#60;/Contact&#62;
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- Header ends here -->
+
+  <!-- Main content -->
+  <main>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" id="hamburger" data-aos="fade">
+      <div class="hamburgerbase">
+        <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
+          <span class="burger-bar" id="burger-bar1"></span>
+          <span class="burger-bar" id="burger-bar2"></span>
+          <span class="burger-bar" id="burger-bar3"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Toggle Menu -->
+    <div class="mobiletogglemenu" id="mobiletogglemenu">
+      <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
+        <li id="home-mobile-tab" class="mobile-navbar-tabs-li home" onclick="hidemenubyli()">
+          <a href="index.html" tabindex="0" aria-label="Home menu button">
+            &#60;/Home&#62;
+          </a>
+        </li>
+        <li class="projects mobile-navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+          <a href="projects.html" aria-label="projects menu button">
+            &#60;/Projects&#62;
+          </a>
+        </li>
+        <li class="work-experience mobile-navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+          <a href="work-experience.html" aria-label="work-experience menu button">
+            &#60;/Work-experience&#62;
+          </a>
+        </li>
+        <li class="Assignments mobile-navbar-tabs-li activeThismobiletab" data-aos="fade-down" data-aos-delay="900">
+          <a href="assignments.html" aria-label="assignments menu button">
+            &#60;/Assignments&#62;
+          </a>
+        </li>
+        <li class="Contact Me mobile-navbar-tabs-li" data-aos="fade-down" data-aos-delay="1100">
+          <a href="contact.html" aria-label="contact menu button">
+            &#60;/Contact&#62;
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Mobile toggle menu ends -->
+
+    <!-- Assignments Section -->
+    <section class="skills-section-container" id="assignments">
+      <div class="skills-section">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="Assignments heading">
+            &#60;/Assignments&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+
+        <!-- Assignment Entries -->
+        <div class="assignment-entries">
+          <!-- Assignment 0 -->
+          <div class="assignment-box-wrapper" data-aos="fade-up">
+            <div class="assignment-box" id="assignment-1">
+              <div class="info-div">
+                <article class="AssignmentHeading">Assignment 0</article>
+                <p class="AssignmentDescription">
+                    A python script that adds two numbers together and prints their sum to the command line
+                </p>
+                <div class="assignment-buttons">
+                  <a href="https://github.com/aarsh-mehta/aarsh-assignment-0" target="_blank" class="github-redirect"
+                    aria-label="Visit Assignment 0 GitHub Repository">
+                    <img src="src/svg/github.svg" alt="GitHub link" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assignment 1 -->
+
+          <!-- Add more assignments as needed -->
+        </div>
+      </div>
+    </section>
+    <!-- Assignments Section ends -->
+  </main>
+  <!-- Main ends here -->
+
+  <!-- Footer -->
+  <footer id="footer">
+    <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
+      <article aria-label="Back to top">&#8592;BACK TO TOP</article>
+    </button>
+    <div class="footer-bottom">
+      <article>
+        Design & Built by Aarsh Mehta
+        &#169; 2024
+      </article>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- Custom cursor script (same as index.html) -->
+  <!-- ... -->
+</body>
+
+</html>
