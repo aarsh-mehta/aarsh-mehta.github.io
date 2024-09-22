@@ -134,6 +134,22 @@
           </div>
 
           <!-- Assignment 1 -->
+          <div class="assignment-box-wrapper" data-aos="fade-up">
+            <div class="assignment-box" id="assignment-1">
+              <div class="info-div">
+                <article class="AssignmentHeading">Assignment 1</article>
+                <p class="AssignmentDescription">
+                  Data Collection and Analysis: For this assignment, I contributed to gathering data on elevator arrival times at the ground floor in the CDS building. Using this dataset, I determined the optimal waiting position to reduce the expected walking distance to the next arriving elevator.
+                </p>
+                <div class="assignment-buttons">
+                  <a href="https://github.com/aarsh-mehta/aarsh-assignment-1" target="_blank" class="github-redirect"
+                    aria-label="Visit Assignment 1 GitHub Repository">
+                    <img src="src/svg/github.svg" alt="GitHub link" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- Add more assignments as needed -->
         </div>
@@ -148,12 +164,13 @@
     <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
       <article aria-label="Back to top">&#8592;BACK TO TOP</article>
     </button>
-    <div class="footer-bottom">
-      <article>
-        Design & Built by Aarsh Mehta
-        &#169; 2024
-      </article>
-    </div>
+      <div class="footer-bottom">
+        <article>
+          Design & Built by Aarsh Mehta
+          &#169; 2024
+        </article>
+      </div>
+
   </footer>
 
   <!-- Scripts -->
@@ -163,8 +180,41 @@
   <script>
     AOS.init();
   </script>
-  <!-- Custom cursor script (same as index.html) -->
-  <!-- ... -->
+  <script>
+    const cursorInner = document.getElementById("cursor-inner");
+    const cursorOuter = document.getElementById("cursor-outer");
+    const links = document.querySelectorAll("a,label,button");
+
+    document.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      cursorInner.style.left = `${posX}px`;
+      cursorInner.style.top = `${posY}px`;
+
+      // cursorOuter.style.left = `${posX}px`;
+      // cursorOuter.style.top = `${posY}px`;
+
+      cursorOuter.animate(
+        {
+          left: `${posX}px`,
+          top: `${posY}px`,
+        },
+        { duration: 500, fill: "forwards" }
+      );
+
+      links.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          cursorInner.classList.add("hover");
+          cursorOuter.classList.add("hover");
+        });
+        link.addEventListener("mouseleave", () => {
+          cursorInner.classList.remove("hover");
+          cursorOuter.classList.remove("hover");
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
